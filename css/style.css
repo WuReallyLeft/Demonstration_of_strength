@@ -349,3 +349,42 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
+
+/* --- 回到頂部按鈕 --- */
+#backToTopBtn {
+    position: fixed; /* 固定在視窗位置 */
+    right: 25px; /* 距離右邊 25px */
+    bottom: 25px; /* 距離底部 25px */
+    width: 50px;
+    height: 50px;
+    background-color: rgba(44, 62, 80, 0.7); /* 半透明背景 */
+    color: white;
+    border-radius: 50%; /* 圓形 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 100; /* 確保在其他元素之上 */
+    
+    /* 預設隱藏，並準備好動畫效果 */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* 按鈕可見時的樣式 */
+#backToTopBtn.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* 滑鼠懸停時的效果 */
+#backToTopBtn:hover {
+    background-color: rgba(44, 62, 80, 1); /* 變不透明 */
+    transform: scale(1.1); /* 輕微放大 */
+}

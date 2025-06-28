@@ -235,3 +235,42 @@ setTimeout(() => {
         }, index * 100);
     });
 }, 2000);
+
+
+// --- 回到頂部按鈕功能 ---
+function setupBackToTopButton() {
+    const backToTopBtn = document.getElementById('backToTopBtn');
+
+    if (!backToTopBtn) {
+        return; // 如果找不到按鈕元素，就直接結束
+    }
+
+    // 監聽頁面滾動事件
+    window.addEventListener('scroll', () => {
+        // 如果滾動超過 300px，就顯示按鈕，否則隱藏
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    });
+
+    // 監聽按鈕點擊事件
+    backToTopBtn.addEventListener('click', () => {
+        // 平滑滾動到頁面頂部
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+// 在頁面載入完成後，除了執行原有功能，也要啟動回到頂部按鈕的功能
+document.addEventListener('DOMContentLoaded', function () {
+    createParticles();
+    setupScrollAnimation();
+    loadDynamicImages();
+    setupImagePreview();
+    setupProjectButtons();
+    setupBackToTopButton(); // <-- 新增這一行來呼叫新功能
+});
