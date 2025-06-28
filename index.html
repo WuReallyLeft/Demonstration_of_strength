@@ -9,136 +9,163 @@
 </head>
 
 <body>
-    <!-- 頁面過渡動畫 -->
     <div class="page-transition">
         <div class="transition-text">歡迎來到我的學術成果與專業實力的展現</div>
     </div>
 
-    <!-- 浮動粒子背景 -->
     <div class="floating-particles" id="particles"></div>
 
     <div class="container">
-        <!-- 標題區域 -->
         <header class="header fade-in">
             <h1>學術成果與專業實力的展現</h1>
             <p>在這裡展示我的學術成就、獲得的獎項以及專業證照，見證我的成長歷程與專業能力</p>
         </header>
 
-        <!-- 專案導航按鈕 -->
         <nav class="project-nav fade-in">
-            <!-- 主要專案作品集按鈕 -->
             <a href="https://github.com/WuReallyLeft" target="_blank"  class="project-btn primary">🚀 專案作品集</a>
             <a href="https://github.com/adpoe0716/FishFarm_ESG" target="_blank"  class="project-btn primary">🚀 畢業專題</a>
-            <!-- 頁面內跳轉按鈕 -->
             <a href="#awards" class="project-btn">🏆 獲獎紀錄</a>
             <a href="#certificates" class="project-btn">📜 專業證照</a>
             <a href="#academic" class="project-btn">📊 學術成績</a>
         </nav>
 
-
-
         <div class="showcase-grid">
-            <!-- 第一排：學術成績 + 其他成就 -->
-            <div class="two-column-layout">
-                <section class="category-card fade-in" id="academic">
-                    <h2 class="category-title">📊 學術成績</h2>
-                    <div class="image-grid">
-                        <div class="image-container">
-                            <img src="images/score.jpg" alt="大學成績單"
-                                class="responsive-image">
-                            <div class="image-overlay">大學成績單</div>
-                        </div>
+            <section class="category-card fade-in" id="academic">
+                <h2 class="category-title">📊 大學成績單</h2>
+                <div class="image-grid single-item-grid">
+                    <div class="image-container">
+                        <img src="images/score.jpg" alt="大學成績單" class="responsive-image">
+                        <div class="image-overlay">大學成績單</div>
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <section class="category-card fade-in" id="others">
-                    <h2 class="category-title">✨ 國科會大專生研究計畫</h2>
-                    <div class="image-grid">
-                        <div class="image-container">
-                            <img src="images/Research.jpg" alt="大專生研究計畫" class="responsive-image">
-                            <div class="image-overlay">大專生研究計畫</div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <!-- 獎狀區域 -->
             <section class="category-card fade-in showcase-large" id="awards">
                 <h2 class="category-title">🏆 獲獎紀錄</h2>
-                <div class="image-grid">
-                    <!-- 在這裡放置你的獎狀圖片 -->
-                    <div class="image-container">
-                        <img src="images/score3.jpg" alt="110書卷獎" class="responsive-image">
-                        <div class="image-overlay">110書卷獎</div>
+                <div class="item-grid">
+                    <div class="item-card">
+                        <div class="image-container">
+                            <img src="images/score3.jpg" alt="110書卷獎" class="responsive-image">
+                        </div>
+                        <div class="item-info">
+                            <h3>110學年度 書卷獎</h3>
+                        </div>
                     </div>
-                    <div class="image-container">
-                        <img src="images/score2.jpg" alt="112書卷獎" class="responsive-image">
-                        <div class="image-overlay">112書卷獎</div>
+                    <div class="item-card">
+                        <div class="image-container">
+                            <img src="images/score2.jpg" alt="112書卷獎" class="responsive-image">
+                        </div>
+                        <div class="item-info">
+                            <h3>112學年度 書卷獎</h3>
+                        </div>
                     </div>
-                    <div class="image-container">
-                        <img src="images/score4.jpg" alt="學業表現優異獎" class="responsive-image">
-                        <div class="image-overlay">學業表現優異獎</div>
+                    <div class="item-card">
+                        <div class="image-container">
+                            <img src="images/score4.jpg" alt="學業表現優異獎" class="responsive-image">
+                        </div>
+                        <div class="item-info">
+                            <h3>學業表現優異獎</h3>
+                        </div>
                     </div>
                 </div>
             </section>
-            <!-- 證照區域 -->
+
             <section class="category-card fade-in showcase-large" id="certificates">
                 <h2 class="category-title">📜 專業證照</h2>
-                <div class="image-grid">
-                    <!-- 在這裡放置你的證照圖片 -->
-                    <div class="image-container">
-                        <img src="images/my_license11.jpg" alt="ERP證照" class="responsive-image">
-                        <div class="image-overlay">ERP證照</div>
+                <div class="item-grid">
+                    <div class="item-card">
+                        <div class="image-container">
+                            <img src="images/my_license11.jpg" alt="ERP證照" class="responsive-image">
+                        </div>
+                        <div class="item-info">
+                            <h3>ERP 規劃師</h3>
+                        </div>
                     </div>
-                    <div class="image-container">
-                        <img src="images/my_license10.jpg" alt="會計事務-資訊" class="responsive-image">
-                        <div class="image-overlay">會計事務-資訊</div>
+                    <div class="item-card">
+                        <div class="image-container">
+                            <img src="images/my_license10.jpg" alt="會計事務-資訊" class="responsive-image">
+                        </div>
+                        <div class="item-info">
+                            <h3>會計事務-資訊 丙級</h3>
+                        </div>
                     </div>
-                    <div class="image-container">
-                        <img src="images/my_license9.jpg" alt="會計事務-人工記帳丙級" class="responsive-image">
-                        <div class="image-overlay">會計事務-人工記帳丙級</div>
+                    <div class="item-card">
+                        <div class="image-container">
+                            <img src="images/my_license9.jpg" alt="會計事務-人工記帳丙級" class="responsive-image">
+                        </div>
+                        <div class="item-info">
+                            <h3>會計事務-人工記帳 丙級</h3>
+                        </div>
                     </div>
-                    <div class="image-container">
-                        <img src="images/my_license8.jpg" alt="電腦軟體應用丙級" class="responsive-image">
-                        <div class="image-overlay">電腦軟體應用丙級</div>
+                    <div class="item-card">
+                        <div class="image-container">
+                            <img src="images/my_license8.jpg" alt="電腦軟體應用丙級" class="responsive-image">
+                        </div>
+                        <div class="item-info">
+                            <h3>電腦軟體應用 丙級</h3>
+                        </div>
                     </div>
-                    <div class="image-container">
-                        <img src="images/my_license7.jpg" alt="會計能力測驗三級合格證書" class="responsive-image">
-                        <div class="image-overlay">會計能力測驗三級合格證書</div>
+                    <div class="item-card">
+                        <div class="image-container">
+                            <img src="images/my_license7.jpg" alt="會計能力測驗三級合格證書" class="responsive-image">
+                        </div>
+                        <div class="item-info">
+                            <h3>會計能力測驗 三級</h3>
+                        </div>
                     </div>
-                    <div class="image-container">
-                        <img src="images/my_license6.jpg" alt="TQC 專業行銷人員" class="responsive-image">
-                        <div class="image-overlay">TQC 專業行銷人員</div>
+                    <div class="item-card">
+                        <div class="image-container">
+                            <img src="images/my_license6.jpg" alt="TQC 專業行銷人員" class="responsive-image">
+                        </div>
+                        <div class="item-info">
+                            <h3>TQC 專業行銷人員</h3>
+                        </div>
                     </div>
-                    <div class="image-container">
-                        <img src="images/my_license5.jpg" alt="TQC 專業 e-Office人員" class="responsive-image">
-                        <div class="image-overlay">TQC 專業 e-Office人員</div>
+                    <div class="item-card">
+                        <div class="image-container">
+                            <img src="images/my_license5.jpg" alt="TQC 專業 e-Office人員" class="responsive-image">
+                        </div>
+                        <div class="item-info">
+                            <h3>TQC 專業 e-Office 人員</h3>
+                        </div>
                     </div>
-                    <div class="image-container">
-                        <img src="images/my_license4.jpg" alt="TQC 雲端服務商務人員" class="responsive-image">
-                        <div class="image-overlay">TQC 雲端服務商務人員</div>
+                    <div class="item-card">
+                        <div class="image-container">
+                            <img src="images/my_license4.jpg" alt="TQC 雲端服務商務人員" class="responsive-image">
+                        </div>
+                        <div class="item-info">
+                            <h3>TQC 雲端服務商務人員</h3>
+                        </div>
                     </div>
-                    <div class="image-container">
-                        <img src="images/my_license3.jpg" alt="TQC Excel 2010 實用級" class="responsive-image">
-                        <div class="image-overlay">TQC Excel 2010 實用級</div>
+                    <div class="item-card">
+                        <div class="image-container">
+                            <img src="images/my_license3.jpg" alt="TQC Excel 2010 實用級" class="responsive-image">
+                        </div>
+                        <div class="item-info">
+                            <h3>TQC Excel 2010 實用級</h3>
+                        </div>
                     </div>
-                    <div class="image-container">
-                        <img src="images/my_license2.jpg" alt="TQC 雲端技術與網頁服務 專業級" class="responsive-image">
-                        <div class="image-overlay">TQC 雲端技術與網頁服務 專業級</div>
+                    <div class="item-card">
+                        <div class="image-container">
+                            <img src="images/my_license2.jpg" alt="TQC 雲端技術與網頁服務 專業級" class="responsive-image">
+                        </div>
+                        <div class="item-info">
+                            <h3>TQC 雲端技術與網頁服務</h3>
+                        </div>
                     </div>
-                    <div class="image-container">
-                        <img src="images/my_license1.jpg" alt="TQC 電子商務概論 專業級" class="responsive-image">
-                        <div class="image-overlay">TQC 電子商務概論 專業級</div>
+                    <div class="item-card">
+                        <div class="image-container">
+                            <img src="images/my_license1.jpg" alt="TQC 電子商務概論 專業級" class="responsive-image">
+                        </div>
+                        <div class="item-info">
+                            <h3>TQC 電子商務概論</h3>
+                        </div>
                     </div>
                 </div>
             </section>
-
-
         </div>
     </div>
-    <script src="./js/script.js">
-
-    </script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
