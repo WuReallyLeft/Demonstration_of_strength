@@ -75,28 +75,30 @@ function loadDynamicImages() {
 
 // 圖片預覽功能（支援所有大小的圖片）
 function setupImagePreview() {
-    // 為佔位符添加點擊事件
-    document.querySelectorAll('.image-placeholder').forEach(placeholder => {
-        placeholder.addEventListener('click', function () {
-            console.log('點擊了：', this.textContent.trim());
-            // 這裡可以實現文件選擇功能
-        });
-    });
-
-    // 為圖片容器添加點擊預覽功能
     document.querySelectorAll('.image-container').forEach(container => {
-        container.addEventListener('click', function () {
+        if (container.dataset.previewInit) return;
+        container.dataset.previewInit = '1';
+
+        container.addEventListener('click', function (e) {
+            // 如果目前畫面上已有圖片預覽，就不再建立新的
+            if (document.querySelector('div[style*="position: fixed"][style*="z-index: 10000"]')) {
+                e.stopPropagation();
+                return;
+            }
+
             const img = this.querySelector('.responsive-image');
             if (img) {
-                // 創建全屏預覽
+                console.log('createImagePreview called');
                 createImagePreview(img.src, img.alt);
             }
         });
     });
 }
 
+
 // 創建全屏圖片預覽
 function createImagePreview(src, alt) {
+
     const overlay = document.createElement('div');
     overlay.style.cssText = `
                 position: fixed;
@@ -167,7 +169,10 @@ function createImagePreview(src, alt) {
     };
 
     overlay.addEventListener('click', closePreview);
-    closeBtn.addEventListener('click', closePreview);
+    closeBtn.addEventListener('click',  (e) =>{
+        e.stopPropagation();
+        closePreview();
+    } );
 
     // ESC 鍵關閉
     const handleKeydown = (e) => {
